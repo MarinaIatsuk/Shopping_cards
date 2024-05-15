@@ -1,18 +1,13 @@
-import { useEffect } from 'react'
-import { useDispatch,useSelector } from "react-redux";
-import { getCardServer } from '../../store/slice/cardReducer';
-import './App.css'
-import Cards from '../Cards/Cards';
+import style from "./App.module.scss";
+import Cards from "../Cards/Cards";
+import Filter from "../Filter/Filter";
 
 function App() {
-
-
-
   return (
-    <>
-     <Cards/>
-    </>
-  )
+    <div className={style.wrapper}>
+      <Filter />
+      <Cards />
+    </div>
+  );
 }
-
-export default App
+export default App;
