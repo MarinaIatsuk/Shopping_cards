@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { downloadCards, filterCards } from "../../store/slice/cardReducer";
 import style from "./Filter.module.scss";
 
@@ -21,11 +21,8 @@ export default function Filter() {
   }
 
   return (
-      <button onClick={filter}> 
-      {favourite? <p>Вернуться к общему списку</p>:<p>Показать избранное</p>}
-      </button>
+    <button onClick={filter}>
+      {favourite ? <p>Вернуться к общему списку</p> : <p>Показать избранное</p>}
+    </button>
   );
 }
-
-
-

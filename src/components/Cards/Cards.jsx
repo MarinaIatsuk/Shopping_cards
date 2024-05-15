@@ -16,17 +16,14 @@ export default function Card() {
   const [like, setLike] = useState(false);
 
   useEffect(() => {
-    // Если данных в локальном хранилище нет, делаем запрос к API
     if (!localStorage.getItem("cards")) {
       dispatch(getCardServer());
     } else {
-      // Если данные уже есть в хранилище, загружаем их в Redux state
       const storedCards = JSON.parse(localStorage.getItem("cards"));
       dispatch(downloadCards(storedCards));
     }
   }, []);
 
-  //убираем инфу по карточкам в переменную cards
   const cards = useSelector((state) => state.cards.cards);
 
   function deleteCard(id) {
