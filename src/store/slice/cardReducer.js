@@ -66,11 +66,19 @@ const cardSlice = createSlice({
     builder
       //регистрируем downloadCards как обработчик для getCardServer и записываем пришедшие данные в локальное хранилище под именем cards:
       .addCase(getCardServer.fulfilled, (state, action) => {
-        state.cards = action.payload;
+        //сохраняем данные в хранилище
         localStorage.setItem("cards", JSON.stringify(action.payload));
+        // Обновляем состояние Redux для моментальной отрисовки компонента
+      state.cards = action.payload.map((item) => ({
+        id: item.id,
+        title: item.title,
+        price: item.price,
+        image: item.image,
+      }));
       })
   },
 });
+
 
 export const { downloadCards, removeCard, likeCard, unlikeCard, filterCards } =
   cardSlice.actions;

@@ -13,7 +13,6 @@ import iconEmpty from "../../assets/images/icons/icon-heart-empty.png";
 
 export default function Card() {
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(true);
   const [like, setLike] = useState(false);
 
   useEffect(() => {

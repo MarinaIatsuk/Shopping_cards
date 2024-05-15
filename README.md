@@ -1,8 +1,17 @@
-# React + Vite
+# Тестовое задание
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Функциональность:
 
-Currently, two official plugins are available:
+- Загрузка карточек товаров из АПИ с сохранением в LocalStorage;
+- Возможность удаления карточки и  добавления ее в избранное;
+- Фильтрация карточек, добавленных в избранное.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**установка:**
+
+```sh
+git clone git@github.com:MarinaIatsuk/Shopping_cards.git
+npm install
+npm run dev
+```
+
+
